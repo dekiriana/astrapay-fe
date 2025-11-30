@@ -1,0 +1,70 @@
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 12px;
+  }
+  
+  /* Search */
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--surface-border);
+    background: var(--surface-ground);
+  }
+  
+  /* Categories */
+  .cat-title {
+    margin: 16px 0 6px;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+  }
+  
+  .cat-item {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: left;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .cat-item.active,
+  .cat-item:hover {
+    background: var(--surface-hover);
+  }
+  
+  /* Notes List */
+  .notes-list {
+    margin-top: 12px;
+    overflow-y: auto;
+  }
+  
+  .note-item {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .note-item:hover {
+    background: var(--surface-hover);
+  }
+  
+  .note-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .note-item p {
+    font-size: 13px;
+    color: var(--text-color-secondary);
+  }
+  
+  .note-item span {
+    font-size: 11px;
+    color: var(--text-color-secondary);
+  }
+  

@@ -1,0 +1,27 @@
+.notes-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+    background: var(--surface-ground);
+  }
+  
+  .sidebar {
+    border-right: 1px solid var(--surface-border);
+    background: var(--surface-card);
+  }
+  
+  .editor {
+    background: var(--surface-ground);
+  }
+  
+  /* Mobile — sidebar collapses */
+  @media (max-width: 768px) {
+    .notes-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  }
+  

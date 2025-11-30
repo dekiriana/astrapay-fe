@@ -1,0 +1,14 @@
+.max-h-24 {
+    max-height: 6rem;
+    overflow: hidden;
+  }
+  
+  .animate-fadeSlide {
+    animation: fadeSlide .25s ease-out;
+  }
+  
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

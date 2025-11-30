@@ -1,0 +1,94 @@
+<p-card class="mx-12 mt-6  mb-8 bg-[#ffffff] dark:bg-[#2c2c2e] border-0 shadow-sm rounded-xl dark:text-gray-200">
+
+    <form [formGroup]="noteForm" (ngSubmit)="onSubmit()" class="space-y-6">
+
+        @if (errorMessage()) {
+            <p-message severity="error" [text]="errorMessage()" class="block mb-4"></p-message>
+        }
+
+        <div>
+            <label class="font-medium block mb-1 text-[#1d1d1f] dark:text-gray-200">
+                {{ 'NOTES.INPUT_TITLE' | translate }}
+            </label>
+
+            <input
+                type="text"
+                formControlName="title"
+                pInputText
+                class="w-full bg-[#fafafa] dark:bg-[#3a3a3c] dark:text-gray-100 
+                       rounded-lg px-3 py-2 border border-transparent 
+                       focus:border-blue-400 dark:focus:border-blue-500 transition"
+                [invalid]="shouldError('title')">
+
+            @if (shouldError('title')) {
+                <small class="p-error block mt-1">
+                    @if (formTitle.errors?.['required']) {
+                        {{ 'VALIDATION.REQUIRED' | translate }}
+                    } @else if (formTitle.errors?.['maxlength']) {
+                        {{ 'VALIDATION.MAX_LENGTH_COUNT' | translate }}
+                    }
+                </small>
+            }
+        </div>
+
+        <div>
+            <label class="font-medium block mb-1 text-[#1d1d1f] dark:text-gray-200">
+                {{ 'ACTIONS.CATEGORY' | translate }}
+            </label>
+
+            <p-select
+                formControlName="category"
+                [options]="categories()"
+                optionLabel="label"
+                optionValue="value"
+                class="w-full"
+            >
+                <ng-template pTemplate="item" let-item>
+                    {{ item.label | translate }}
+                </ng-template>
+
+                <ng-template pTemplate="selectedItem" let-selected>
+                    {{ selected?.label | translate }}
+                </ng-template>
+            </p-select>
+
+
+            @if (shouldError('category')) {
+                <small class="p-error block mt-1">
+                    {{ 'VALIDATION.REQUIRED' | translate }}
+                </small>
+            }
+        </div>
+
+        <div>
+            <label class="font-medium block mb-1 text-[#1d1d1f] dark:text-gray-200">
+                {{ 'NOTES.INPUT_CONTENT' | translate }}
+            </label>
+
+            <textarea
+                pTextarea
+                [rows]="3"
+                [autoResize]="true"
+                formControlName="content"
+                class="w-full bg-[#fafafa] dark:bg-[#3a3a3c] dark:text-gray-100 
+                       rounded-lg px-3 py-2 border border-transparent
+                       focus:border-blue-400 dark:focus:border-blue-500 transition"
+                [invalid]="shouldError('content')">
+            </textarea>
+
+            @if (shouldError('content')) {
+                <small class="p-error block mt-1">
+                    {{ 'VALIDATION.REQUIRED' | translate }}
+                </small>
+            }
+        </div>
+
+        <p-button
+            type="submit"
+            icon="pi pi-check"
+            [disabled]="isLoading() || noteForm.invalid"
+            [label]="isLoading() ? ('ACTIONS.PROCESS' | translate) : ('ACTIONS.SAVE' | translate)"
+            styleClass="p-button-lg w-full md:w-auto">
+        </p-button>
+    </form>
+</p-card>

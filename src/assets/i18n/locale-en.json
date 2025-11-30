@@ -1,0 +1,45 @@
+{
+    "APP_TITLE": "Simple Notes Application",
+    "APP_ID":"ID",
+    "APP_EN":"EN",
+    "NOTES": {
+      "TITLE_LIST": "Notes List",
+      "HEADER_ADD": "Add New Note",
+      "INPUT_TITLE": "Note Title",
+      "INPUT_CONTENT": "Content",
+      "INPUT_CATEGORY": "Category"
+    },
+    "VALIDATION": {
+      "REQUIRED": "Is required.",
+      "MAX_LENGTH": "Max {value} characters."
+    },
+    "BUTTON": {
+      "SAVE": "Save Note",
+      "DELETE": "Delete",
+      "EDIT": "Edit",
+      "CANCEL": "Cancel"
+    },
+    "MESSAGES": {
+      "NOTES_LOAD_FAILED": "Failed to load notes. Ensure Back-End is running.",
+      "NOTES_EMPTY": "No notes found."
+    },
+    "DIALOG": {
+        "CONFIRM_DELETE_HEADER": "Confirm Deletion",
+        "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete this note?",
+        "EDIT_HEADER": "Edit Note"
+    },
+    "ACTIONS": {
+        "PROCESS": "Processing...",
+        "SAVE": "Save Note",
+        "CREATED": "Created",
+        "CATEGORY": "Category",
+        "CATEGORY_PLACEHOLDER": "GENERAL"
+    },
+    "CATEGORY": {
+        "GENERAL": "General",
+        "PERSONAL": "Personal",
+        "WORK": "Work",
+        "IDEAS": "Ideas"
+    }    
+    
+  }

@@ -1,7 +1,61 @@
-<p-button label="Klik Saya" icon="pi pi-check" styleClass="p-button-success"></p-button>
+<header 
+  class="app-header w-full flex items-center justify-between p-4 
+         bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700
+         transition-colors duration-300"
+>
 
-<div class="mt-4">
-    <button pButton type="button" label="Tombol dengan Tailwind" class="shadow-lg hover:shadow-xl"></button>
+  <h1 class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200">
+    {{ 'APP_TITLE' | translate }}
+  </h1>
+
+
+  <div class="flex items-center gap-4">
+
+  
+    <div class="flex gap-2 items-center">
+      <i class="pi pi-globe text-gray-700 dark:text-gray-300"></i>
+
+      <button 
+        class="px-2 py-1 rounded text-sm font-medium transition
+               bg-gray-200 dark:bg-gray-700
+               text-gray-800 dark:text-gray-200
+               hover:bg-gray-300 dark:hover:bg-gray-600
+               [&.active]:!bg-blue-600 [&.active]:!text-white"
+        (click)="changeLang('id')" 
+        [class.active]="lang() === 'id'"
+      >
+        ID
+      </button>
+
+      <button 
+        class="px-2 py-1 rounded text-sm font-medium transition
+               bg-gray-200 dark:bg-gray-700
+               text-gray-800 dark:text-gray-200
+               hover:bg-gray-300 dark:hover:bg-gray-600
+               [&.active]:!bg-blue-600 [&.active]:!text-white"
+        (click)="changeLang('en')" 
+        [class.active]="lang() === 'en'"
+      >
+        EN
+      </button>
+    </div>
+
+  
+    <button 
+      (click)="toggleTheme()"
+      class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 
+             hover:bg-gray-300 dark:hover:bg-gray-600
+             transition-all duration-300"
+    >
+      <i class="pi" 
+         [ngClass]="isDarkMode ? 'pi-sun text-yellow-400' : 'pi-moon text-gray-800'">
+      </i>
+    </button>
+  </div>
+</header>
+
+<div class="p-4 md:p-6">
+  <app-note-shell></app-note-shell>
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
