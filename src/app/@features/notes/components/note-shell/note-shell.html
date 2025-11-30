@@ -1,0 +1,18 @@
+<div class="flex h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden">
+    <aside class="hidden md:flex w-80 border-r border-gray-300 dark:border-gray-700">
+      <app-note-sidebar />
+    </aside>
+
+    <div class="md:hidden">
+      <app-note-sidebar />
+    </div>
+
+    <main class="flex-1 overflow-y-auto">
+      <app-note-form></app-note-form>
+      <app-note-list></app-note-list>
+    </main>
+  
+</div>
+
+<p-confirmDialog></p-confirmDialog>
+  

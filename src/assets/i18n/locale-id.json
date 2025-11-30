@@ -1,0 +1,46 @@
+{
+    "APP_TITLE": "Aplikasi Catatan Sederhana",
+    "APP_ID":"ID",
+    "APP_EN":"EN",
+    "NOTES": {
+      "TITLE_LIST": "Daftar Catatan",
+      "HEADER_ADD": "Tambah Catatan Baru",
+      "INPUT_TITLE": "Judul Catatan",
+      "INPUT_CONTENT": "Isi/Konten Catatan",
+      "INPUT_CATEGORY": "Kategori"
+    },
+    "VALIDATION": {
+        "REQUIRED": "Wajib diisi.",
+        "MAX_LENGTH": "Maksimal {value} karakter.",
+        "MAX_LENGTH_COUNT": "Maksimal 50 karakter." 
+    },
+    "BUTTON": {
+      "SAVE": "Simpan Catatan",
+      "DELETE": "Hapus",
+      "EDIT": "Edit",
+      "CANCEL": "Batal"
+    },
+    "MESSAGES": {
+      "NOTES_LOAD_FAILED": "Gagal memuat catatan. Pastikan Back-End aktif.",
+      "NOTES_EMPTY": "Tidak ada catatan yang ditemukan."
+    },
+    "DIALOG": {
+        "CONFIRM_DELETE_HEADER": "Konfirmasi Hapus",
+        "CONFIRM_DELETE_MESSAGE": "Yakin ingin menghapus catatan ini?",
+        "EDIT_HEADER": "Edit Note"
+    },
+    "ACTIONS": {
+        "PROCESS": "Memproses...",
+        "SAVE": "Simpan Catatan",
+        "CREATED": "Dibuat",
+        "CATEGORY": "Kategori",
+        "CATEGORY_PLACEHOLDER": "GENERAL"
+    },
+    "CATEGORY": {
+        "GENERAL": "Umum",
+        "PERSONAL": "Pribadi",
+        "WORK": "Pekerjaan",
+        "IDEAS": "Ide"
+    }   
+    
+  }
