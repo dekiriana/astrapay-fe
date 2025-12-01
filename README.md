@@ -1,8 +1,9 @@
-<<<<<<< HEAD
 # astrapay
 Exam
 =======
 # Myapp
+npm install
+please check on environment set useMock = false to connect data with API
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.11.
 
